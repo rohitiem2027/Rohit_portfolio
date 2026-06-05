@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #D8E1EC;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/*navbar section all feature*/
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.Navbar {
+    height: 50px;
+    width: 900px;
+    border-radius: 10px;
+    background-color: #318BF0;
+    font-style: bolder;
+    position: fixed;
+
+
+    z-index: 200;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(49, 139, 240, 0.5), 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.outerdiv {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navfooter {
+    width: 100%;
+    height: 48px;
+    background-color: #2d3748;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.Navfooterinner {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a0aec0;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+/*— social media links */
+.box-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #1246ad;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+}
+
+/* Light pill — show your love */
+.box-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #fefcf3;
+    color: #2d3748;
+    border: 1px solid #e2e0d6;
+}
+
+
+main p {
+    margin-top: 480px;
+    padding: 0 60px;
+    line-height: 1.7;
+    font-family: sans-serif;
+    color: #2d3748;
+}
+
+.image {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 40px 0 20px 40px;
+    border: 3px solid #1152c4;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.4);
+    position: absolute;
+    left: 100px;
+
+    /* Entrance animation */
+    /* animation: fadeInScale 0.8s ease-out, float 3s ease-in-out 0.8s infinite; */
+    animation: dropIn 1.05s ease-out, float 3s ease-in-out 1s infinite;
+
+
+
+    /* Smooth hover transition */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.image:hover {
+    transform: scale(2);
+    border-color: #608efa;
+    box-shadow: 0 0 30px rgba(49, 139, 240, 0.5), 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.06);
+}
+
+/* Fade in + scale up on page load */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gentle floating motion */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/*drop in effect*/
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
